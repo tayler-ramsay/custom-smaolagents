@@ -3,7 +3,7 @@ from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
 # Define the agent with its tools and model
 agent = CodeAgent(
     tools=[DuckDuckGoSearchTool()],  # Use DuckDuckGo for search
-    model=HfApiModel()              # Load a Hugging Face-hosted model
+    model=HfApiModel(model_id="EleutherAI/gpt-neo-2.7B")  # Load Neo GPT model
 )
 
 # Run the agent with a question

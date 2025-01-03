@@ -27,6 +27,7 @@ from transformers import (
 
 import litellm
 import logging
+from src.smolagents.logging_config import setup_logging
 import os
 import random
 
@@ -35,6 +36,7 @@ from huggingface_hub import InferenceClient
 from .tools import Tool
 from .utils import parse_json_tool_call
 
+setup_logging()
 logger = logging.getLogger(__name__)
 
 DEFAULT_JSONAGENT_REGEX_GRAMMAR = {

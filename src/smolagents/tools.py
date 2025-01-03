@@ -4,7 +4,7 @@
 # Copyright 2024 The HuggingFace Inc. team. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
+# You may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
 #     http://www.apache.org/licenses/LICENSE-2.0
@@ -36,6 +36,7 @@ from huggingface_hub import (
 from huggingface_hub.utils import RepositoryNotFoundError
 from packaging import version
 import logging
+from src.smolagents.logging_config import setup_logging
 from transformers.utils import (
     TypeHintParsingException,
     cached_file,
@@ -48,11 +49,12 @@ from transformers.utils.chat_template_utils import _parse_type_hint
 from transformers.dynamic_module_utils import get_imports
 from transformers import AutoProcessor
 
-from .types import ImageType, handle_agent_input_types, handle_agent_output_types
+from .custom_types import ImageType, handle_agent_input_types, handle_agent_output_types
 from .utils import instance_to_source
 from .tool_validation import validate_tool_attributes, MethodChecker
 
 
+setup_logging()
 logger = logging.getLogger(__name__)
 
 

@@ -26,8 +26,10 @@ from transformers.utils import (
     is_vision_available,
 )
 import logging
+from src.smolagents.logging_config import setup_logging
 
 
+setup_logging()
 logger = logging.getLogger(__name__)
 
 if is_vision_available():
