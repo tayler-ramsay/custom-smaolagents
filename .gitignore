@@ -150,30 +150,21 @@ savedir/
 output/
 tool_output/
 
+# Virtual environments
+myenv/
+new_env/
+smolenv/
 
-# Python bytecode
+# Byte-compiled Python files
 __pycache__/
 *.py[cod]
 
-# Environment files
-.env
-*.env
+# Egg files and folders
+*.egg-info/
 
-# Virtual environments
-venv/
-env/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Logs
-*.log
-*.out
-*.err
-
-# macOS files
+# macOS system files
 .DS_Store
 
-# PyCharm or VSCode project settings
-.idea/
-.vscode/
+# Logs and temporary files
+*.log
+*.tmp
