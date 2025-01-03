@@ -149,3 +149,31 @@ archive/
 savedir/
 output/
 tool_output/
+
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+*.env
+
+# Virtual environments
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+*.out
+*.err
+
+# macOS files
+.DS_Store
+
+# PyCharm or VSCode project settings
+.idea/
+.vscode/
